@@ -11801,7 +11801,7 @@ This is a classification problem because we are dealing with labeled data and th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries</span>
@@ -11853,14 +11853,14 @@ This is a classification problem because we are dealing with labeled data and th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Calculate number of students</span>
 <span class="n">n_students</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">student_data</span><span class="p">)</span>
 
 <span class="c1"># TODO: Calculate number of features</span>
-<span class="n">n_features</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">student_data</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">n_features</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">student_data</span><span class="o">.</span><span class="n">columns</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
 
 <span class="c1"># TODO: Calculate passing students</span>
 <span class="n">n_passed</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">student_data</span><span class="p">[</span><span class="n">student_data</span><span class="p">[</span><span class="s1">&#39;passed&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">])</span>
@@ -11870,7 +11870,7 @@ This is a classification problem because we are dealing with labeled data and th
 <span class="c1"># n_failed = n_students - n_passed</span>
 
 <span class="c1"># TODO: Calculate graduation rate</span>
-<span class="n">grad_rate</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">n_passed</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">n_students</span><span class="p">)</span>
+<span class="n">grad_rate</span> <span class="o">=</span> <span class="p">(</span> <span class="nb">float</span><span class="p">(</span><span class="n">n_passed</span><span class="p">)</span> <span class="o">/</span> <span class="nb">float</span><span class="p">(</span><span class="n">n_students</span><span class="p">)</span> <span class="p">)</span> <span class="o">*</span> <span class="mf">100.00</span>
 
 <span class="c1"># Print the results</span>
 <span class="k">print</span> <span class="s2">&quot;Total number of students: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_students</span><span class="p">)</span>
@@ -11891,10 +11891,10 @@ This is a classification problem because we are dealing with labeled data and th
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Total number of students: 395
-Number of features: 31
+Number of features: 30
 Number of students who passed: 265
 Number of students who failed: 130
-Graduation rate of the class: 0.67%
+Graduation rate of the class: 67.09%
 </pre>
 </div>
 </div>
@@ -11917,7 +11917,7 @@ Graduation rate of the class: 0.67%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Extract feature columns</span>
@@ -11999,7 +11999,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">preprocess_features</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -12070,7 +12070,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import any additional functionality you may need here</span>
@@ -12197,7 +12197,7 @@ Optimizing this model via methods prunining or max depth assignment might lead t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">train_classifier</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">):</span>
@@ -12270,7 +12270,7 @@ Optimizing this model via methods prunining or max depth assignment might lead t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import the three supervised learning models from sklearn</span>
@@ -12279,8 +12279,8 @@ Optimizing this model via methods prunining or max depth assignment might lead t
 <span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="kn">import</span> <span class="n">GaussianNB</span>
 
 <span class="c1"># TODO: Initialize the three models</span>
-<span class="n">clf_A</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">()</span>
-<span class="n">clf_B</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+<span class="n">clf_A</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVC</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">clf_B</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 <span class="n">clf_C</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
 
 
@@ -12295,19 +12295,13 @@ Optimizing this model via methods prunining or max depth assignment might lead t
 <span class="c1"># y_train_300 = y_train[:296]</span>
 
 <span class="c1"># TODO: Execute the &#39;train_predict&#39; function for each classifier and each training set size</span>
-<span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">296</span><span class="p">):</span>
-    <span class="k">print</span> <span class="s2">&quot;SVM:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-    <span class="n">train_predict</span><span class="p">(</span><span class="n">clf_A</span><span class="p">,</span> <span class="n">X_train</span><span class="p">[:</span><span class="n">l</span><span class="p">],</span> <span class="n">y_train</span><span class="p">[:</span><span class="n">l</span><span class="p">],</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
-    <span class="k">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
-    
-<span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">296</span><span class="p">):</span>
-    <span class="k">print</span> <span class="s2">&quot;Decision Tree:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-    <span class="n">train_predict</span><span class="p">(</span><span class="n">clf_B</span><span class="p">,</span> <span class="n">X_train</span><span class="p">[:</span><span class="n">l</span><span class="p">],</span> <span class="n">y_train</span><span class="p">[:</span><span class="n">l</span><span class="p">],</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
-    <span class="k">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
-    
-<span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">200</span><span class="p">,</span><span class="mi">296</span><span class="p">):</span>
-    <span class="k">print</span> <span class="s2">&quot;Gaussian NB:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
-    <span class="n">train_predict</span><span class="p">(</span><span class="n">clf_C</span><span class="p">,</span> <span class="n">X_train</span><span class="p">[:</span><span class="n">l</span><span class="p">],</span> <span class="n">y_train</span><span class="p">[:</span><span class="n">l</span><span class="p">],</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+
+<span class="c1"># loop thru models, then thru train sizes</span>
+<span class="k">for</span> <span class="n">clf</span> <span class="ow">in</span> <span class="p">[</span><span class="n">clf_A</span><span class="p">,</span> <span class="n">clf_B</span><span class="p">,</span> <span class="n">clf_C</span><span class="p">]:</span>
+    <span class="k">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">{}: </span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">296</span><span class="p">]:</span>
+        <span class="n">train_predict</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">[:</span><span class="n">n</span><span class="p">],</span> <span class="n">y_train</span><span class="p">[:</span><span class="n">n</span><span class="p">],</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
+        <span class="k">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
     <span class="k">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
 </pre></div>
 
@@ -12321,85 +12315,91 @@ Optimizing this model via methods prunining or max depth assignment might lead t
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>SVM:100
+<pre>
+SVC: 
+
 Training a SVC using a training set size of 100. . .
-Trained model in 0.0017 seconds
+Trained model in 0.0022 seconds
 Made predictions in 0.0010 seconds.
 F1 score for training set: 0.8633.
-Made predictions in 0.0018 seconds.
+Made predictions in 0.0007 seconds.
 F1 score for test set: 0.7651.
 
 
-SVM:200
 Training a SVC using a training set size of 200. . .
-Trained model in 0.0034 seconds
-Made predictions in 0.0020 seconds.
+Trained model in 0.0032 seconds
+Made predictions in 0.0021 seconds.
 F1 score for training set: 0.8762.
-Made predictions in 0.0010 seconds.
+Made predictions in 0.0012 seconds.
 F1 score for test set: 0.7848.
 
 
-SVM:296
 Training a SVC using a training set size of 296. . .
-Trained model in 0.0061 seconds
-Made predictions in 0.0049 seconds.
+Trained model in 0.0059 seconds
+Made predictions in 0.0041 seconds.
 F1 score for training set: 0.8764.
-Made predictions in 0.0016 seconds.
+Made predictions in 0.0014 seconds.
 F1 score for test set: 0.7871.
 
 
-Decision Tree:100
+
+
+
+DecisionTreeClassifier: 
+
 Training a DecisionTreeClassifier using a training set size of 100. . .
-Trained model in 0.0007 seconds
-Made predictions in 0.0002 seconds.
+Trained model in 0.0010 seconds
+Made predictions in 0.0003 seconds.
 F1 score for training set: 1.0000.
 Made predictions in 0.0002 seconds.
-F1 score for test set: 0.6190.
+F1 score for test set: 0.6202.
 
 
-Decision Tree:200
 Training a DecisionTreeClassifier using a training set size of 200. . .
-Trained model in 0.0015 seconds
+Trained model in 0.0011 seconds
 Made predictions in 0.0002 seconds.
 F1 score for training set: 1.0000.
 Made predictions in 0.0002 seconds.
-F1 score for test set: 0.7647.
+F1 score for test set: 0.7500.
 
 
-Decision Tree:296
 Training a DecisionTreeClassifier using a training set size of 296. . .
 Trained model in 0.0016 seconds
 Made predictions in 0.0002 seconds.
 F1 score for training set: 1.0000.
 Made predictions in 0.0002 seconds.
-F1 score for test set: 0.6357.
+F1 score for test set: 0.6875.
 
 
-Gaussian NB:100
+
+
+
+GaussianNB: 
+
 Training a GaussianNB using a training set size of 100. . .
-Trained model in 0.0006 seconds
-Made predictions in 0.0003 seconds.
+Trained model in 0.0016 seconds
+Made predictions in 0.0007 seconds.
 F1 score for training set: 0.8308.
 Made predictions in 0.0003 seconds.
 F1 score for test set: 0.8000.
 
 
-Gaussian NB:200
 Training a GaussianNB using a training set size of 200. . .
-Trained model in 0.0007 seconds
-Made predictions in 0.0003 seconds.
+Trained model in 0.0010 seconds
+Made predictions in 0.0006 seconds.
 F1 score for training set: 0.8248.
 Made predictions in 0.0003 seconds.
 F1 score for test set: 0.7273.
 
 
-Gaussian NB:296
 Training a GaussianNB using a training set size of 296. . .
-Trained model in 0.0008 seconds
-Made predictions in 0.0005 seconds.
+Trained model in 0.0010 seconds
+Made predictions in 0.0004 seconds.
 F1 score for training set: 0.8058.
 Made predictions in 0.0003 seconds.
 F1 score for test set: 0.7591.
+
+
 
 
 </pre>
@@ -12425,8 +12425,7 @@ F1 score for test set: 0.7591.
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong> Classifer 1 - Support Vector Machines (SVM)</strong></p>
-<table>
+<h4 id="-Classifer-1---Support-Vector-Machines-(SVM)"><strong> Classifer 1 - Support Vector Machines (SVM)</strong><a class="anchor-link" href="#-Classifer-1---Support-Vector-Machines-(SVM)">&#182;</a></h4><table>
 <thead><tr>
 <th style="text-align:center">Training Set Size</th>
 <th style="text-align:center">Training Time</th>
@@ -12438,22 +12437,22 @@ F1 score for test set: 0.7591.
 <tbody>
 <tr>
 <td style="text-align:center">100</td>
-<td style="text-align:center">0.0015 s</td>
-<td style="text-align:center">0.0009 s</td>
+<td style="text-align:center">0.0014 s</td>
+<td style="text-align:center">0.0008 s</td>
 <td style="text-align:center">0.8633</td>
 <td style="text-align:center">0.7651</td>
 </tr>
 <tr>
 <td style="text-align:center">200</td>
-<td style="text-align:center">0.0034 s</td>
-<td style="text-align:center">0.0013 s</td>
+<td style="text-align:center">0.0031 s</td>
+<td style="text-align:center">0.0015 s</td>
 <td style="text-align:center">0.8762</td>
 <td style="text-align:center">0.7848</td>
 </tr>
 <tr>
 <td style="text-align:center">300</td>
-<td style="text-align:center">0.0055 s</td>
-<td style="text-align:center">0.0021 s</td>
+<td style="text-align:center">0.0061 s</td>
+<td style="text-align:center">0.0017 s</td>
 <td style="text-align:center">0.8764</td>
 <td style="text-align:center">0.7871</td>
 </tr>
@@ -12472,24 +12471,24 @@ F1 score for test set: 0.7591.
 <tbody>
 <tr>
 <td style="text-align:center">100</td>
-<td style="text-align:center">0.0009 s</td>
-<td style="text-align:center">0.0003 s</td>
+<td style="text-align:center">0.0007 s</td>
+<td style="text-align:center">0.0002 s</td>
 <td style="text-align:center">1</td>
-<td style="text-align:center">0.6154</td>
+<td style="text-align:center">0.6202</td>
 </tr>
 <tr>
 <td style="text-align:center">200</td>
-<td style="text-align:center">0.0011 s</td>
+<td style="text-align:center">0.0012 s</td>
 <td style="text-align:center">0.0002 s</td>
 <td style="text-align:center">1</td>
-<td style="text-align:center">0.7737</td>
+<td style="text-align:center">0.7500</td>
 </tr>
 <tr>
 <td style="text-align:center">300</td>
 <td style="text-align:center">0.0016 s</td>
 <td style="text-align:center">0.0002 s</td>
 <td style="text-align:center">1</td>
-<td style="text-align:center">0.6406</td>
+<td style="text-align:center">0.6875</td>
 </tr>
 </tbody>
 </table>
@@ -12507,21 +12506,21 @@ F1 score for test set: 0.7591.
 <tr>
 <td style="text-align:center">100</td>
 <td style="text-align:center">0.0006 s</td>
-<td style="text-align:center">0.0003</td>
+<td style="text-align:center">0.0002</td>
 <td style="text-align:center">0.8308</td>
 <td style="text-align:center">0.8000</td>
 </tr>
 <tr>
 <td style="text-align:center">200</td>
-<td style="text-align:center">0.0010 s</td>
+<td style="text-align:center">0.0007 s</td>
 <td style="text-align:center">0.0003 s</td>
 <td style="text-align:center">0.8248</td>
 <td style="text-align:center">0.7273</td>
 </tr>
 <tr>
 <td style="text-align:center">300</td>
-<td style="text-align:center">0.0009 s</td>
-<td style="text-align:center">0.0002 s</td>
+<td style="text-align:center">0.0016 s</td>
+<td style="text-align:center">0.0003 s</td>
 <td style="text-align:center">0.8058</td>
 <td style="text-align:center">0.7591</td>
 </tr>
@@ -12580,9 +12579,11 @@ Performance of the algorithm is very reasonable and prediction time is outstandi
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong>
-A decision tree is rooted in making choices that maximize the likelyhood of understanding if a child is at risk of not graduating. There's a one-time, up-front fee to process all the data received to train the model/algorithm about how to make these decisions, and it can be significant in time. However, this leads to very fast determination of a prediction based on new data being fed in and results being returned.</p>
-<p>The model is trained by asking the "right" questions (which can be mathematically defined through entropy) based on these multiple features presented in the given information and figuring out which decisions lead to a general conclusion for predicting if the child will succeeed or not. 
-It is very similar to the game of 20 questions, where each question tries to gain more information about the target answer.</p>
+A decision tree is rooted in making choices that maximize the likelyhood of understanding if a child is at risk of not graduating. By looking at the available data and determining which factors are important in deciding if a student passed, the model creates a flowchart or "tree" of yes/no questions that can make predictions for new students.</p>
+<p>There's a one-time, up-front fee to process all the data received to train the model/algorithm about how to make these decisions, and it can be significant in time. However, this leads to very fast determination of a prediction based on new data being fed in and results being returned.</p>
+<p>The model is trained by asking the "right" question based on multiple features presented for past students (age, gender, family, etc) and figuring out which decisions lead to a general conclusion for predicting if the child will succeeed or not.</p>
+<p>It is very similar to the game of 20 questions, where each question tries to gain more information about the target answer. In this case, "good" questions can be defined mathematically through entropy to maximize the information gain at each question which makes it an ideal candidate for the chosen model where the target answer is students succeeding. 
+To solidify what qualifies as "good" questions can be understood practically, without entropy: if playing the 20 quesitons game, one can start by asking a broad question to find out general classification (i.e. is it an object or living?) and narrowing in more as you get closer to the answer (if the answer to the previous question is living, we can ask--is it a human or other?).</p>
 <p>Once these questions have been asked and answers associated, the tree is built and one must simply follow it with a new students information (answering each question along the path as you go) to see if an intervention is necessary.</p>
 
 </div>
@@ -12614,7 +12615,7 @@ It is very similar to the game of 20 questions, where each question tries to gai
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;GridSearchCV&#39; and &#39;make_scorer&#39;</span>
@@ -12625,7 +12626,7 @@ It is very similar to the game of 20 questions, where each question tries to gai
 <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;max_depth&#39;</span><span class="p">:</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">32</span><span class="p">)}</span>
 
 <span class="c1"># TODO: Initialize the classifier</span>
-<span class="n">clf</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">()</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeClassifier</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
 <span class="c1"># TODO: Make an f1 scoring function using &#39;make_scorer&#39; </span>
 <span class="n">f1_scorer</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">f1_score</span><span class="p">,</span> <span class="n">pos_label</span><span class="o">=</span><span class="s1">&#39;yes&#39;</span><span class="p">)</span>
@@ -12641,6 +12642,7 @@ It is very similar to the game of 20 questions, where each question tries to gai
 <span class="c1"># Report the final F1 score for training and testing after parameter tuning</span>
 <span class="k">print</span> <span class="s2">&quot;Tuned model has a training F1 score of {:.4f}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">predict_labels</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">))</span>
 <span class="k">print</span> <span class="s2">&quot;Tuned model has a testing F1 score of {:.4f}.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">predict_labels</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">))</span>
+<span class="k">print</span> <span class="s2">&quot;optimal Max depth is: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">clf</span><span class="o">.</span><span class="n">max_depth</span>
 </pre></div>
 
 </div>
@@ -12655,8 +12657,9 @@ It is very similar to the game of 20 questions, where each question tries to gai
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Made predictions in 0.0002 seconds.
 Tuned model has a training F1 score of 0.8351.
-Made predictions in 0.0002 seconds.
+Made predictions in 0.0004 seconds.
 Tuned model has a testing F1 score of 0.8026.
+optimal Max depth is: 2
 </pre>
 </div>
 </div>
