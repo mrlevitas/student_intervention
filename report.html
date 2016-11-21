@@ -11801,7 +11801,7 @@ This is a classification problem because we are dealing with labeled data and th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries</span>
@@ -11853,7 +11853,7 @@ This is a classification problem because we are dealing with labeled data and th
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Calculate number of students</span>
@@ -11917,7 +11917,7 @@ Graduation rate of the class: 67.09%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Extract feature columns</span>
@@ -11999,7 +11999,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">preprocess_features</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -12070,7 +12070,7 @@ Feature values:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import any additional functionality you may need here</span>
@@ -12083,7 +12083,7 @@ Feature values:
 <span class="n">num_test</span> <span class="o">=</span> <span class="n">X_all</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">num_train</span>
 
 <span class="c1"># TODO: Shuffle and split the dataset into the number of training and testing points above</span>
-<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_all</span><span class="p">,</span> <span class="n">y_all</span> <span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_all</span><span class="p">,</span> <span class="n">y_all</span> <span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.24</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 
 <span class="c1"># Show the results of the split</span>
 <span class="k">print</span> <span class="s2">&quot;Training set has {} samples.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">X_train</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -12100,8 +12100,8 @@ Feature values:
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Training set has 296 samples.
-Testing set has 99 samples.
+<pre>Training set has 300 samples.
+Testing set has 95 samples.
 </pre>
 </div>
 </div>
@@ -12197,7 +12197,7 @@ Optimizing this model via methods prunining or max depth assignment might lead t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">train_classifier</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">):</span>
@@ -12270,7 +12270,7 @@ Optimizing this model via methods prunining or max depth assignment might lead t
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import the three supervised learning models from sklearn</span>
@@ -12299,7 +12299,7 @@ Optimizing this model via methods prunining or max depth assignment might lead t
 <span class="c1"># loop thru models, then thru train sizes</span>
 <span class="k">for</span> <span class="n">clf</span> <span class="ow">in</span> <span class="p">[</span><span class="n">clf_A</span><span class="p">,</span> <span class="n">clf_B</span><span class="p">,</span> <span class="n">clf_C</span><span class="p">]:</span>
     <span class="k">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">{}: </span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">__class__</span><span class="o">.</span><span class="n">__name__</span><span class="p">)</span>
-    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">296</span><span class="p">]:</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">100</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">300</span><span class="p">]:</span>
         <span class="n">train_predict</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X_train</span><span class="p">[:</span><span class="n">n</span><span class="p">],</span> <span class="n">y_train</span><span class="p">[:</span><span class="n">n</span><span class="p">],</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span>
         <span class="k">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
     <span class="k">print</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
@@ -12319,27 +12319,27 @@ Optimizing this model via methods prunining or max depth assignment might lead t
 SVC: 
 
 Training a SVC using a training set size of 100. . .
-Trained model in 0.0022 seconds
-Made predictions in 0.0010 seconds.
-F1 score for training set: 0.8633.
+Trained model in 0.0014 seconds
+Made predictions in 0.0008 seconds.
+F1 score for training set: 0.8777.
 Made predictions in 0.0007 seconds.
-F1 score for test set: 0.7651.
+F1 score for test set: 0.7746.
 
 
 Training a SVC using a training set size of 200. . .
-Trained model in 0.0032 seconds
-Made predictions in 0.0021 seconds.
-F1 score for training set: 0.8762.
-Made predictions in 0.0012 seconds.
-F1 score for test set: 0.7848.
+Trained model in 0.0028 seconds
+Made predictions in 0.0020 seconds.
+F1 score for training set: 0.8679.
+Made predictions in 0.0016 seconds.
+F1 score for test set: 0.7815.
 
 
-Training a SVC using a training set size of 296. . .
+Training a SVC using a training set size of 300. . .
 Trained model in 0.0059 seconds
-Made predictions in 0.0041 seconds.
-F1 score for training set: 0.8764.
-Made predictions in 0.0014 seconds.
-F1 score for test set: 0.7871.
+Made predictions in 0.0046 seconds.
+F1 score for training set: 0.8761.
+Made predictions in 0.0016 seconds.
+F1 score for test set: 0.7838.
 
 
 
@@ -12348,27 +12348,27 @@ F1 score for test set: 0.7871.
 DecisionTreeClassifier: 
 
 Training a DecisionTreeClassifier using a training set size of 100. . .
-Trained model in 0.0010 seconds
-Made predictions in 0.0003 seconds.
-F1 score for training set: 1.0000.
+Trained model in 0.0008 seconds
 Made predictions in 0.0002 seconds.
-F1 score for test set: 0.6202.
+F1 score for training set: 1.0000.
+Made predictions in 0.0001 seconds.
+F1 score for test set: 0.6552.
 
 
 Training a DecisionTreeClassifier using a training set size of 200. . .
-Trained model in 0.0011 seconds
+Trained model in 0.0012 seconds
 Made predictions in 0.0002 seconds.
 F1 score for training set: 1.0000.
 Made predictions in 0.0002 seconds.
 F1 score for test set: 0.7500.
 
 
-Training a DecisionTreeClassifier using a training set size of 296. . .
+Training a DecisionTreeClassifier using a training set size of 300. . .
 Trained model in 0.0016 seconds
 Made predictions in 0.0002 seconds.
 F1 score for training set: 1.0000.
 Made predictions in 0.0002 seconds.
-F1 score for test set: 0.6875.
+F1 score for test set: 0.6613.
 
 
 
@@ -12377,27 +12377,27 @@ F1 score for test set: 0.6875.
 GaussianNB: 
 
 Training a GaussianNB using a training set size of 100. . .
-Trained model in 0.0016 seconds
-Made predictions in 0.0007 seconds.
-F1 score for training set: 0.8308.
+Trained model in 0.0007 seconds
 Made predictions in 0.0003 seconds.
-F1 score for test set: 0.8000.
+F1 score for training set: 0.8467.
+Made predictions in 0.0002 seconds.
+F1 score for test set: 0.8029.
 
 
 Training a GaussianNB using a training set size of 200. . .
-Trained model in 0.0010 seconds
-Made predictions in 0.0006 seconds.
-F1 score for training set: 0.8248.
-Made predictions in 0.0003 seconds.
-F1 score for test set: 0.7273.
-
-
-Training a GaussianNB using a training set size of 296. . .
-Trained model in 0.0010 seconds
+Trained model in 0.0007 seconds
 Made predictions in 0.0004 seconds.
-F1 score for training set: 0.8058.
+F1 score for training set: 0.8406.
 Made predictions in 0.0003 seconds.
-F1 score for test set: 0.7591.
+F1 score for test set: 0.7244.
+
+
+Training a GaussianNB using a training set size of 300. . .
+Trained model in 0.0009 seconds
+Made predictions in 0.0005 seconds.
+F1 score for training set: 0.8038.
+Made predictions in 0.0003 seconds.
+F1 score for test set: 0.7634.
 
 
 
@@ -12438,23 +12438,23 @@ F1 score for test set: 0.7591.
 <tr>
 <td style="text-align:center">100</td>
 <td style="text-align:center">0.0014 s</td>
-<td style="text-align:center">0.0008 s</td>
-<td style="text-align:center">0.8633</td>
-<td style="text-align:center">0.7651</td>
+<td style="text-align:center">0.0007 s</td>
+<td style="text-align:center">0.8777</td>
+<td style="text-align:center">0.7746</td>
 </tr>
 <tr>
 <td style="text-align:center">200</td>
 <td style="text-align:center">0.0031 s</td>
-<td style="text-align:center">0.0015 s</td>
-<td style="text-align:center">0.8762</td>
-<td style="text-align:center">0.7848</td>
+<td style="text-align:center">0.0016 s</td>
+<td style="text-align:center">0.8679</td>
+<td style="text-align:center">0.7815</td>
 </tr>
 <tr>
 <td style="text-align:center">300</td>
 <td style="text-align:center">0.0061 s</td>
-<td style="text-align:center">0.0017 s</td>
-<td style="text-align:center">0.8764</td>
-<td style="text-align:center">0.7871</td>
+<td style="text-align:center">0.0016 s</td>
+<td style="text-align:center">0.8761</td>
+<td style="text-align:center">0.7838</td>
 </tr>
 </tbody>
 </table>
@@ -12471,10 +12471,10 @@ F1 score for test set: 0.7591.
 <tbody>
 <tr>
 <td style="text-align:center">100</td>
-<td style="text-align:center">0.0007 s</td>
-<td style="text-align:center">0.0002 s</td>
+<td style="text-align:center">0.0008 s</td>
+<td style="text-align:center">0.0001 s</td>
 <td style="text-align:center">1</td>
-<td style="text-align:center">0.6202</td>
+<td style="text-align:center">0.6552</td>
 </tr>
 <tr>
 <td style="text-align:center">200</td>
@@ -12488,7 +12488,7 @@ F1 score for test set: 0.7591.
 <td style="text-align:center">0.0016 s</td>
 <td style="text-align:center">0.0002 s</td>
 <td style="text-align:center">1</td>
-<td style="text-align:center">0.6875</td>
+<td style="text-align:center">0.6613</td>
 </tr>
 </tbody>
 </table>
@@ -12505,24 +12505,24 @@ F1 score for test set: 0.7591.
 <tbody>
 <tr>
 <td style="text-align:center">100</td>
-<td style="text-align:center">0.0006 s</td>
+<td style="text-align:center">0.0007 s</td>
 <td style="text-align:center">0.0002</td>
-<td style="text-align:center">0.8308</td>
-<td style="text-align:center">0.8000</td>
+<td style="text-align:center">0.8467</td>
+<td style="text-align:center">0.8029</td>
 </tr>
 <tr>
 <td style="text-align:center">200</td>
 <td style="text-align:center">0.0007 s</td>
 <td style="text-align:center">0.0003 s</td>
-<td style="text-align:center">0.8248</td>
-<td style="text-align:center">0.7273</td>
+<td style="text-align:center">0.8406</td>
+<td style="text-align:center">0.7244</td>
 </tr>
 <tr>
 <td style="text-align:center">300</td>
-<td style="text-align:center">0.0016 s</td>
+<td style="text-align:center">0.0009 s</td>
 <td style="text-align:center">0.0003 s</td>
-<td style="text-align:center">0.8058</td>
-<td style="text-align:center">0.7591</td>
+<td style="text-align:center">0.8038</td>
+<td style="text-align:center">0.7634</td>
 </tr>
 </tbody>
 </table>
@@ -12615,7 +12615,7 @@ To solidify what qualifies as "good" questions can be understood practically, wi
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Import &#39;GridSearchCV&#39; and &#39;make_scorer&#39;</span>
@@ -12656,9 +12656,9 @@ To solidify what qualifies as "good" questions can be understood practically, wi
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Made predictions in 0.0002 seconds.
-Tuned model has a training F1 score of 0.8351.
-Made predictions in 0.0004 seconds.
-Tuned model has a testing F1 score of 0.8026.
+Tuned model has a training F1 score of 0.8354.
+Made predictions in 0.0003 seconds.
+Tuned model has a testing F1 score of 0.8000.
 optimal Max depth is: 2
 </pre>
 </div>
